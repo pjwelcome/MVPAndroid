@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MVPAndroid</string>
+    <string name="emailHintString">Please enter your email address</string>
+    <string name="passwordHintString">Enter your password</string>
+    <string name="LoginButtonString">Login</string>
+    <string name="username_error">Error with Username</string>
+</resources>
