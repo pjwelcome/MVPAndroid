@@ -27,6 +27,7 @@ public class LoginPresenter implements ILoginPresenter, ILoginRepo.OnLoginFinish
         }
 
         loginRepo.login(username, password, this);
+        loginView.RegisterUserWithFirebase();
     }
 
     @Override

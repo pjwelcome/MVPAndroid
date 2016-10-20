@@ -67,4 +67,9 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }
+
+    @Override
+    public void RegisterUserWithFirebase() {
+        //TODO: do some firebase register here.
+    }
 }
