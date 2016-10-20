@@ -34,7 +34,7 @@ before_script:
 script:
   #- ./gradlew connectedAndroidTest
   #- ./gradlew connectedCheck
-  - gradle build connectedCheck
+  - ./gradlew build
 
 after_failure: "cat $TRAVIS_BUILD_DIR/app/build/outputs/lint-results-debug.xml"
 
