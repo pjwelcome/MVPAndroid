@@ -1,6 +1,7 @@
 language: android
 jdk: oraclejdk8
-sudo: false
+cache: false
+sudo: true
 
 android:
   components:
@@ -11,6 +12,16 @@ android:
     #- sys-img-armeabi-v7a-android-22
     - extra-android-m2repository
     - extra-android-support
+
+before_install:
+  #- ./execute inexistent install-and-update-sdk
+  #- ./execute create-and-start-device wait-for-device-online
+
+install:
+  - ./gradlew --version # show version and download Gradle Wrapper when is not present in cache
+  - ./gradlew clean # clean project and download Android dependencies when are not present in cache
+  - ./gradlew assemble
+
 
 before_script:
   # Create and start emulator
